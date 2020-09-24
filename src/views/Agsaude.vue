@@ -9,13 +9,9 @@
 import Main from '@/components/Main.vue';
 
 export default {
-  name: 'Home',
+  name: 'AGsaude',
   components: {
     Main,
   },
 };
 </script>
-
-<style scoped>
-
-</style>
