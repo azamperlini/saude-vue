@@ -1,17 +1,18 @@
 <template>
   <div class="container">
-    <Main />
+    <div class="container-content  bg-content">
+      <h1> Prontuários </h1>
+      <p>lorem ipsum dolor sit amet, consectetur adip</p>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Main from '@/components/Main.vue';
 
 export default {
   name: 'Prontuarios',
   components: {
-    Main,
   },
 };
 </script>

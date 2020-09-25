@@ -17,8 +17,7 @@ export default {
     Footer,
   },
 };
-
-</script>>
+</script>
 
 <style>
 
@@ -64,6 +63,12 @@ html, body {
   margin: 0% auto;
   padding: var(--padrao-padding);
   max-width: 1366px;
+}
+
+.container-content {
+  margin: 0 auto;
+  width: 1366px;
+  padding: 10px;
 }
 
 .bg-content {

@@ -3,13 +3,13 @@
     <div class="content">
       <div class="nav">
         <router-link to="/">
-          <img v-show="!home" alt="Quem Somos Logo" src="../assets/logo_quemSomos_home.png">
-          <img v-show="home" alt="Quem Somos Logo" src="../assets/logo_quemSomos.png">
+          <img v-show="changeImage" alt="Quem Somos Logo" src="../assets/logo_quemSomos_home.png">
+          <img v-show="!changeImage" alt="Quem Somos Logo" src="../assets/logo_quemSomos.png">
         </router-link>
         <ul>
           <router-link to="/informativos"><li>Informativos</li></router-link>
           <router-link to="/prontuarios"><li>Prontuários</li></router-link>
-          <router-link to="/ag-saude"><li>AG. Saúde</li></router-link>
+          <router-link to="/agente-saude"><li>AG. Saúde</li></router-link>
           <router-link to="/login"><li id="login">Login</li></router-link>
         </ul>
       </div>
@@ -21,16 +21,33 @@
 
 export default {
   name: 'Header',
-
+  data() {
+    return {
+      home: false,
+    };
+  },
+  computed: {
+    changeImage() {
+      // router.$
+      const urlBase = window.location.pathname;
+      console.log(urlBase);
+      if (urlBase === '/') {
+        console.log(urlBase);
+        return true;
+      }
+      return false;
+    },
+  },
 };
 </script>
 
 <style scoped>
-
 header {
   background-color: white;
   padding: 0;
   margin: 0;
+  box-shadow: var(--shadowgrid-box-shadow);
+
 }
 
 header .content {
