@@ -3,13 +3,14 @@
     <div class="content">
       <div class="nav">
         <router-link to="/">
-          <img v-show="changeImage" alt="Quem Somos Logo" src="../assets/logo_quemSomos_home.png">
-          <img v-show="!changeImage" alt="Quem Somos Logo" src="../assets/logo_quemSomos.png">
+          <img v-show="changeImage" alt="Quem Somos Logo" src="../assets/brand_whoAreYou_home.png">
+          <img v-show="!changeImage" alt="Quem Somos Logo" src="../assets/brand_whoAreYou.png">
         </router-link>
         <ul>
-          <router-link to="/informativos"><li>Informativos</li></router-link>
-          <router-link to="/prontuarios"><li>Prontuários</li></router-link>
-          <router-link to="/agente-saude"><li>AG. Saúde</li></router-link>
+          <router-link to="/informative"><li>Informativos</li></router-link>
+          <router-link to="/medical-records"><li>Prontuários</li></router-link>
+          <router-link to="/health-agent"><li>AG. Saúde</li></router-link>
+          <router-link to="/register"><li id="register">Cadastrar</li></router-link>
           <router-link to="/login"><li id="login">Login</li></router-link>
         </ul>
       </div>
@@ -46,8 +47,7 @@ header {
   background-color: white;
   padding: 0;
   margin: 0;
-  box-shadow: var(--shadowgrid-box-shadow);
-
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 header .content {
@@ -68,24 +68,30 @@ ul {
   padding: 0;
 }
 
-#login {
+#register {
   border-right: 0;
   border-bottom: 4px solid #92cd01;
   border-radius: 0 0 15px 15px;
-  color: black;
 }
 
-#login:hover {
+#login {
+  background-color: var(--verde-backgruond-color);
+  border-radius: 10px;
+  color: black;
+  border: none;
+}
+
+#register:hover, #login:hover {
   background-color: #78a115;
 }
 
 li {
   display: inline-block;
-  margin: 0 0 0 40px;
+  margin: 0 0 0 30px;
   border-right: var(--padraobordacinza-border-right);
   border-bottom: var(--padraobordacinza-border-bottom);
   padding: 3px;
-  width: 150px;
+  width: 145px;
   border-radius: var(--padraoborda-border-radius);
   text-align: center;
   font-size: 1.1em;

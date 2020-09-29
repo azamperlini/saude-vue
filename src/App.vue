@@ -1,22 +1,11 @@
 <template>
   <div id="app">
-    <Header />
     <router-view/>
-    <Footer />
   </div>
 </template>
 
 <script>
 
-import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
-
-export default {
-  components: {
-    Header,
-    Footer,
-  },
-};
 </script>
 
 <style>
@@ -32,14 +21,15 @@ html, body {
 }
 
 :root {
-  --shadowgrid-box-shadow: inset 0 5px 8px rgba(0, 0, 0, 0.4);
+  --shadowgrid-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.3);
   --verde-backgruond-color: #92cd01;
   --verdeclaro-background-color: #e9f5cc;
   --black70-background-color: #6f6f6e;
   --black40-background-color: #b1b1b0;
   --black20-background-color: #d9d9d9;
   --azul-background-color: #083f54;
-  --padrao-padding: 40px;
+  --padrao-padding: 60px;
   --txtAzul-color: #083f54;
   --txtblack70-color: #6f6f6e;
   --txtblack40-color: #b1b1b0;
@@ -67,12 +57,16 @@ html, body {
 
 .container-content {
   margin: 0 auto;
-  width: 1366px;
-  padding: 10px;
+  max-width: 1366px;
 }
 
 .bg-content {
   background-color: white;
+}
+
+input:focus{
+  box-shadow: 0 0 0 0;
+  outline: 0;
 }
 
 </style>

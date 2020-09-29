@@ -12,36 +12,34 @@ const routes = [
     component: Home,
   },
   {
-    path: '/informativos',
-    name: 'Informativos',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Informativos.vue'),
+    path: '/informative',
+    name: 'Informative',
+    component: () => import('../views/site/InformativePage.vue'),
   },
   {
-    path: '/prontuarios',
-    name: 'Prontuarios',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Prontuarios.vue'),
+    path: '/medical-records',
+    name: 'Medical-records',
+    component: () => import('../views/site/MedicalRecordsPage.vue'),
   },
   {
-    path: '/agente-saude',
-    name: 'AgenteSaude',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/site/AgenteSaudePage.vue'),
+    path: '/health-agent',
+    name: 'Health-agent',
+    component: () => import('../views/site/HealthAgentPage.vue'),
   },
   {
-    path: '/privacidade',
-    name: 'Privacidade',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Privacidade.vue'),
+    path: '/privacy',
+    name: 'Privacy',
+    component: () => import('../views/site/PrivacyPage.vue'),
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/site/RegisterPage.vue'),
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/site/LoginPage.vue'),
   },
 ];
 

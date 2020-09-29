@@ -2,20 +2,20 @@
   <footer>
     <div class="footerlinks">
       <div class="content">
-        <div class="parceiro">
-          <p class="parceirotxt"><b>Associação Luterana Bom Jesus Ielusc</b></p>
-          <p class="parceirotxt">Rua Princesa Isabel, 125 - Joinville - Santa Catarina</p>
+        <div class="partner">
+          <p class="partnertxt"><b>Associação Luterana Bom Jesus Ielusc</b></p>
+          <p class="partnertxt">Rua Princesa Isabel, 125 - Joinville - Santa Catarina</p>
           <a href="https://faculdade.ielusc.br/" target="blank">faculdade.ielusc.br</a><br><br>
-          <p class="parceirotxt">Siga o Ielusc nas redes sociais:</p>
-          <div class="parceirolinks">
-            <a href="https://www.facebook.com/faculdadeielusc/" target="blank"><img alt="Link Facebook" src="../assets/redes_face.png"></a>
-            <a href="https://twitter.com/bomjesusielusc" target="blank"><img alt="Link Twiteer" src="../assets/redes_twi.png"></a>
-            <a href="https://www.instagram.com/faculdadeielusc/" target="blank"><img alt="Link Intagram" src="../assets/redes_insta.png"></a>
+          <p class="partnertxt">Siga o Ielusc nas redes sociais:</p>
+          <div class="partnerlinks">
+            <a href="https://www.facebook.com/faculdadeielusc/" target="blank"><img alt="Link Facebook" src="../assets/network_face.png"></a>
+            <a href="https://twitter.com/bomjesusielusc" target="blank"><img alt="Link Twiteer" src="../assets/network_twi.png"></a>
+            <a href="https://www.instagram.com/faculdadeielusc/" target="blank"><img alt="Link Intagram" src="../assets/network_insta.png"></a>
           </div>
         </div>
-        <div class="privacidade">
-          <img alt="Imagem Política de Privacidade" src="../assets/coracao_privacidade.png">
-          <router-link to="/privacidade"><button>Política de Privacidade</button></router-link>
+        <div class="privacy">
+          <img alt="Imagem Política de Privacidade" src="../assets/heart_privacy.png">
+          <router-link to="/privacy"><button>Política de Privacidade</button></router-link>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: 'Main',
+  name: 'Footer',
 
 };
 </script>
@@ -40,7 +40,7 @@ export default {
 footer {
   background-color: var(--verde-backgruond-color);
   margin: 0;
-  padding: 0;
+  padding: 0 0 5px 0;
   color: var(--txtAzul-color);
 }
 
@@ -72,11 +72,10 @@ footer a:hover {
   flex-wrap: wrap;
   justify-content:space-between;
   align-items:center;
-  width: 100%;
   padding: var(--padrao-padding);
 }
 
-.parceirotxt, .parceiro a {
+.partnertxt, .partner a {
   font-size: 1.3em;
   text-align: left;
   color: black;
@@ -84,25 +83,25 @@ footer a:hover {
   text-decoration: none;
 }
 
-.parceirolinks{
+.partnerlinks{
  padding-top: 10px;
 }
 
-.parceirolinks a{
+.partnerlinks a{
  margin: 0 15px 0 0;
 }
 
-.privacidade {
+.privacy {
   margin: 0;
   padding: 0;
   width: 170px;
 }
 
-.privacidade img {
+.privacy img {
   margin: 20px 25px;
 }
 
-.privacidade button {
+.privacy button {
   width: 100%;
   padding: 10px;
   border: none;
@@ -111,7 +110,7 @@ footer a:hover {
   cursor: pointer;
 }
 
-.privacidade button:hover {
+.privacy button:hover {
   background-color: var(--txtblack40-color);
 }
 

@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <Header />
     <div class="container-content  bg-content">
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -15,16 +16,20 @@
          voluptas vero at et earum inventore quos ad?
       </p>
     </div>
-
+    <Footer />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
-  name: 'Informativo',
+  name: 'Informative',
   components: {
+    Header,
+    Footer,
   },
 };
 </script>
