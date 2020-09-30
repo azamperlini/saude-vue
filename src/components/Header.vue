@@ -52,6 +52,7 @@ header {
 
 header .content {
   padding-top: 0;
+  padding-bottom: 30px;
 }
 
 header .content .nav {
@@ -91,10 +92,10 @@ li {
   border-right: var(--padraobordacinza-border-right);
   border-bottom: var(--padraobordacinza-border-bottom);
   padding: 3px;
-  width: 145px;
+  width: 130px;
   border-radius: var(--padraoborda-border-radius);
   text-align: center;
-  font-size: 1.1em;
+  font-size: 0.9em;
   color: var(--txtblack70-color);
 }
 
