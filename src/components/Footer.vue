@@ -76,7 +76,7 @@ footer a:hover {
 }
 
 .partnertxt, .partner a {
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-align: left;
   color: black;
   margin: 0;

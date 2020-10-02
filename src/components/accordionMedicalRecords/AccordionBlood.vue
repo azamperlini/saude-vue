@@ -2,7 +2,7 @@
   <article>
     <div class="content-article" :class="accordionClasses">
         <div class="title-article" @click="toggleAccordion">
-        <h2>Dados Pessoais</h2>
+        <h2>Sangue</h2>
         </div>
         <div class="form-body">
           <form class="form-content">
@@ -139,7 +139,7 @@
 <script>
 
 export default {
-  name: 'AccordionPersonalData',
+  name: 'FormBlood',
   data() {
     return {
       isOpen: true,

@@ -2,13 +2,13 @@
   <article>
     <div class="content-article" :class="accordionClasses">
         <div class="title-article" @click="toggleAccordion">
-        <h2>Dados Pessoais</h2>
+        <h2>Contatos</h2>
         </div>
         <div class="form-body">
           <form class="form-content">
             <div class="inputsBox">
               <div class="inputBoxCol3">
-                <label>CPF:</label><br>
+                <label>Telefone Residencial:</label><br>
                 <input
                   class="inputPadrao"
                   type="text"
@@ -17,7 +17,7 @@
                 >
               </div>
               <div class="inputBoxCol3">
-                <label>Matrícula:</label><br>
+                <label>Celular:</label><br>
                 <input
                   class="inputPadrao"
                   type="text"
@@ -26,106 +26,80 @@
                 >
               </div>
               <div class="inputBoxCol3">
-                <label>Data de Nascimento:</label><br>
-                <input
-                  class="inputPadrao"
-                  type="text"
-                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
-                  oninput="setCustomValidity('')"
-                >
-              </div>
-            </div>
-            <div class="inputsBox">
-              <div class="inputBoxCol2">
-                <label>Nome:</label><br>
-                <input
-                  class="inputPadrao"
-                  type="text"
-                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
-                  oninput="setCustomValidity('')"
-                >
-              </div>
-              <div class="inputBoxCol3">
-                <label>Sexo:</label><br>
-                <select>
-                  <option>MASCULINO</option>
-                  <option>FEMININO</option>
-                </select>
-              </div>
-            </div>
-            <div class="inputsBox">
-              <div class="inputBoxCol3">
-                <label>Nacionalidade:</label><br>
-                <select>
-                  <option>BRASILEIRO</option>
-                  <option>ESTRANGEIRO</option>
-                  <option>NATURALIZADO</option>
-                </select>
-              </div>
-              <div class="inputBoxCol3">
-                <label>Municipio de Nascimento:</label><br>
-                <input
-                  class="inputPadrao"
-                  type="text"
-                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
-                  oninput="setCustomValidity('')"
-                >
-              </div>
-              <div class="inputBoxCol3">
-                <label>Estado Civil:</label><br>
-                <select>
-                  <option>SOLTEIRO</option>
-                  <option>CASADO</option>
-                  <option>UNIÃO ESTÁVEL</option>
-                </select>
-              </div>
-            </div>
-            <div class="inputsBox">
-              <div class="inputBoxCol2">
-                <label>Nome Social:</label><br>
-                <input
-                  class="inputPadrao"
-                  type="text"
-                >
-              </div>
-              <div class="inputBoxCol3">
-                <label>Identidade de Gênero:</label><br>
-                <input
-                  class="inputPadrao"
-                  type="text"
-                >
-              </div>
-            </div>
-            <div class="inputsBox">
-              <div class="inputBoxCol2">
-                <label>Nome da Mãe:</label><br>
-                <input
-                  class="inputPadrao"
-                  type="text"
-                >
-              </div>
-              <div class="inputBoxCol3">
-                <input
+                 <input
                   class="inputCheck"
                   type="checkBox"
                 >
-                <label>Desconhecida</label>
+                <label>WhatsApp</label>
               </div>
             </div>
             <div class="inputsBox">
-              <div class="inputBoxCol2">
-                <label>Nome do Pai:</label><br>
+              <div class="inputBoxCol3">
+                <label>Telefone Emergencial:</label><br>
                 <input
                   class="inputPadrao"
                   type="text"
+                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
+                  oninput="setCustomValidity('')"
                 >
               </div>
               <div class="inputBoxCol3">
+                <label>Nome Contato:</label><br>
                 <input
-                  class="inputCheck"
-                  type="checkBox"
+                  class="inputPadrao"
+                  type="text"
+                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
+                  oninput="setCustomValidity('')"
                 >
-                <label>Desconhecida</label>
+              </div>
+              <div class="inputBoxCol3">
+                <label>Identificação:</label><br>
+                <input
+                  class="inputPadrao"
+                  type="text"
+                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
+                  oninput="setCustomValidity('')"
+                >
+              </div>
+            </div>
+            <div class="inputsBox">
+              <div class="inputBoxCol3">
+                <label>Telefone Emergencial:</label><br>
+                <input
+                  class="inputPadrao"
+                  type="text"
+                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
+                  oninput="setCustomValidity('')"
+                >
+              </div>
+              <div class="inputBoxCol3">
+                <label>Nome Contato:</label><br>
+                <input
+                  class="inputPadrao"
+                  type="text"
+                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
+                  oninput="setCustomValidity('')"
+                >
+              </div>
+              <div class="inputBoxCol3">
+                <label>Identificação:</label><br>
+                <input
+                  class="inputPadrao"
+                  type="text"
+                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
+                  oninput="setCustomValidity('')"
+                >
+              </div>
+            </div>
+            <div class="inputsBox">
+              <div class="inputBoxCol3">
+                <label>E-mail:</label><br>
+                <input
+                  class="inputPadrao"
+                  type="email"
+                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
+                  oninput="setCustomValidity('')"
+                >
               </div>
             </div>
             <button class="buttonSalve">Salvar</button>
@@ -139,7 +113,7 @@
 <script>
 
 export default {
-  name: 'AccordionPersonalData',
+  name: 'FormContact',
   data() {
     return {
       isOpen: true,

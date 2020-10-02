@@ -17,13 +17,12 @@
         <div class="content-numberMR">
           <h2 class="numberMR">Prontuário nº: 2020</h2>
         </div>
-        <AccordionPersonalData />
-        <AccordionPersonalData />
-        <AccordionPersonalData />
-        <AccordionPersonalData />
-        <AccordionPersonalData />
-        <AccordionPersonalData />
-        <AccordionPersonalData />
+        <FormPersonalData />
+        <FormAddress />
+        <FormContact />
+        <FormBlood />
+        <FormAllergy />
+        <FormMedContin />
       </section>
     </main>
     <Footer />
@@ -34,14 +33,24 @@
 
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
-import AccordionPersonalData from '@/components/accordionMedicalRecords/AccordionPersonalData.vue';
+import FormPersonalData from '@/components/accordionMedicalRecords/AccordionPersonalData.vue';
+import FormAddress from '@/components/accordionMedicalRecords/AccordionAddress.vue';
+import FormContact from '@/components/accordionMedicalRecords/AccordionContact.vue';
+import FormBlood from '@/components/accordionMedicalRecords/AccordionBlood.vue';
+import FormAllergy from '@/components/accordionMedicalRecords/AccordionAllergy.vue';
+import FormMedContin from '@/components/accordionMedicalRecords/AccordionMedicineForContinu.vue';
 
 export default {
   name: 'Medical-records',
   components: {
     Header,
     Footer,
-    AccordionPersonalData,
+    FormPersonalData,
+    FormAddress,
+    FormContact,
+    FormBlood,
+    FormAllergy,
+    FormMedContin,
   },
 };
 </script>
@@ -49,14 +58,14 @@ export default {
 <style scoped>
 
 .content {
-  padding-top: 30px;
+  padding: 20px 20px 0 20px;
 }
 .navMR {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 20px;
+  margin: 10px 40px 10px 50px;
 }
 
 .navMR p {
