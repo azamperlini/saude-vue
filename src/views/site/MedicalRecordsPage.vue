@@ -22,6 +22,8 @@
         <AccordionPersonalData />
         <AccordionPersonalData />
         <AccordionPersonalData />
+        <AccordionPersonalData />
+        <AccordionPersonalData />
       </section>
     </main>
     <Footer />
