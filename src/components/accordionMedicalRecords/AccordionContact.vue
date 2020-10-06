@@ -183,7 +183,17 @@ export default {
 }
 
 label {
+  font-size: 1.1em;
   color: var(--txtAzul-color);
+}
+
+.label2 {
+  margin-right: 5%;
+}
+
+.labelCheck {
+  margin-right: 10%;
+  color: black;
 }
 
 .inputsBox {
@@ -214,6 +224,10 @@ label {
 
 .inputCheck {
   margin: 10% 5% 5% 0;
+}
+
+.inputCheck2 {
+  margin: 2% 3% 2% 0;
 }
 
 select {

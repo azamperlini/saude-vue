@@ -8,124 +8,146 @@
           <form class="form-content">
             <div class="inputsBox">
               <div class="inputBoxCol3">
-                <label>CPF:</label><br>
+                <label>Peso kg:</label><br>
                 <input
                   class="inputPadrao"
-                  type="text"
+                  type="number"
                   required="" oninvalid="setCustomValidity('Campo Obrigatório')"
                   oninput="setCustomValidity('')"
                 >
               </div>
               <div class="inputBoxCol3">
-                <label>Matrícula:</label><br>
+                <label>Altura (M):</label><br>
                 <input
                   class="inputPadrao"
-                  type="text"
+                  type="number"
                   required="" oninvalid="setCustomValidity('Campo Obrigatório')"
                   oninput="setCustomValidity('')"
                 >
               </div>
               <div class="inputBoxCol3">
-                <label>Data de Nascimento:</label><br>
+                <label>IMC:</label><br>
                 <input
                   class="inputPadrao"
-                  type="text"
+                  type="number"
                   required="" oninvalid="setCustomValidity('Campo Obrigatório')"
                   oninput="setCustomValidity('')"
                 >
               </div>
             </div>
             <div class="inputsBox">
-              <div class="inputBoxCol2">
-                <label>Nome:</label><br>
-                <input
-                  class="inputPadrao"
-                  type="text"
-                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
-                  oninput="setCustomValidity('')"
-                >
-              </div>
               <div class="inputBoxCol3">
-                <label>Sexo:</label><br>
+                <label>Tipo Sanguineo:</label><br>
                 <select>
-                  <option>MASCULINO</option>
-                  <option>FEMININO</option>
-                </select>
-              </div>
-            </div>
-            <div class="inputsBox">
-              <div class="inputBoxCol3">
-                <label>Nacionalidade:</label><br>
-                <select>
-                  <option>BRASILEIRO</option>
-                  <option>ESTRANGEIRO</option>
-                  <option>NATURALIZADO</option>
+                  <option>A NEGATIVO</option>
+                  <option>A POSITIVO</option>
+                  <option>B NEGATIVO</option>
+                  <option>B POSITIVO</option>
+                  <option>AB NEGATIVO</option>
+                  <option>AB POSITIVO</option>
+                  <option>O NEGATIVO</option>
+                  <option>O POSITIVO</option>
                 </select>
               </div>
               <div class="inputBoxCol3">
-                <label>Municipio de Nascimento:</label><br>
+                <label>Condição de Doador:</label><br>
                 <input
-                  class="inputPadrao"
-                  type="text"
-                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
-                  oninput="setCustomValidity('')"
-                >
-              </div>
-              <div class="inputBoxCol3">
-                <label>Estado Civil:</label><br>
-                <select>
-                  <option>SOLTEIRO</option>
-                  <option>CASADO</option>
-                  <option>UNIÃO ESTÁVEL</option>
-                </select>
-              </div>
-            </div>
-            <div class="inputsBox">
-              <div class="inputBoxCol2">
-                <label>Nome Social:</label><br>
-                <input
-                  class="inputPadrao"
-                  type="text"
-                >
-              </div>
-              <div class="inputBoxCol3">
-                <label>Identidade de Gênero:</label><br>
-                <input
-                  class="inputPadrao"
-                  type="text"
-                >
-              </div>
-            </div>
-            <div class="inputsBox">
-              <div class="inputBoxCol2">
-                <label>Nome da Mãe:</label><br>
-                <input
-                  class="inputPadrao"
-                  type="text"
-                >
-              </div>
-              <div class="inputBoxCol3">
-                <input
-                  class="inputCheck"
+                  class="inputCheck inputCheck2"
                   type="checkBox"
                 >
-                <label>Desconhecida</label>
+                <label class="labelCheck">SIM</label>
+                <input
+                  class="inputCheck inputCheck2"
+                  type="checkBox"
+                >
+                <label class="labelCheck">NÃO</label>
               </div>
-            </div>
-            <div class="inputsBox">
-              <div class="inputBoxCol2">
-                <label>Nome do Pai:</label><br>
+              <div class="inputBoxCol3">
+                <label>Data da Última Doação:</label><br>
                 <input
                   class="inputPadrao"
                   type="text"
+                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
+                  oninput="setCustomValidity('')"
                 >
               </div>
+            </div>
+            <div class="inputsBox">
               <div class="inputBoxCol3">
+                <label>Quantidade de Doação Ano:</label><br>
                 <input
-                  class="inputCheck"
+                  class="inputPadrao"
+                  type="number"
+                  required="" oninvalid="setCustomValidity('Campo Obrigatório')"
+                  oninput="setCustomValidity('')"
+                >
+              </div>
+              <div class="inputBoxCol2">
+                <label class="label2">Conhece os procedimentos para doação?</label>
+                <input
+                  class="inputCheck inputCheck2"
                   type="checkBox"
                 >
-                <label>Desconhecida</label>
+                <label class="labelCheck">SIM</label>
+                <input
+                  class="inputCheck inputCheck2"
+                  type="checkBox"
+                >
+                <label class="labelCheck">NÃO</label>
+              </div>
+            </div>
+            <div class="inputsBox">
+               <div class="inputBoxCol2">
+                <label class="label2">Conhece os locais para doação?</label>
+                <input
+                  class="inputCheck inputCheck2"
+                  type="checkBox"
+                >
+                <label class="labelCheck">SIM</label>
+                <input
+                  class="inputCheck inputCheck2"
+                  type="checkBox"
+                >
+                <label class="labelCheck">NÃO</label>
+              </div>
+              <div class="inputBoxCol2">
+                <label class="label2">Conhece as formas de doação?</label>
+                <input
+                  class="inputCheck inputCheck2"
+                  type="checkBox"
+                >
+                <label class="labelCheck">SIM</label>
+                <input
+                  class="inputCheck inputCheck2"
+                  type="checkBox"
+                >
+                <label class="labelCheck">NÃO</label>
+              </div>
+              <div class="inputBoxCol2">
+                <label class="label2">Conhece os produtos do sangue?</label>
+                <input
+                  class="inputCheck inputCheck2"
+                  type="checkBox"
+                >
+                <label class="labelCheck">SIM</label>
+                <input
+                  class="inputCheck inputCheck2"
+                  type="checkBox"
+                >
+                <label class="labelCheck">NÃO</label>
+              </div>
+              <div class="inputBoxCol2">
+                <label class="label2">Conhece os fatores que impedem doação?</label>
+                <input
+                  class="inputCheck inputCheck2"
+                  type="checkBox"
+                >
+                <label class="labelCheck">SIM</label>
+                <input
+                  class="inputCheck inputCheck2"
+                  type="checkBox"
+                >
+                <label class="labelCheck">NÃO</label>
               </div>
             </div>
             <button class="buttonSalve">Salvar</button>
@@ -209,7 +231,17 @@ export default {
 }
 
 label {
+  font-size: 1.1em;
   color: var(--txtAzul-color);
+}
+
+.label2 {
+  margin-right: 5%;
+}
+
+.labelCheck {
+  margin-right: 10%;
+  color: black;
 }
 
 .inputsBox {
@@ -240,6 +272,10 @@ label {
 
 .inputCheck {
   margin: 10% 5% 5% 0;
+}
+
+.inputCheck2 {
+  margin: 2% 3% 2% 0;
 }
 
 select {
