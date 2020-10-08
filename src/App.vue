@@ -36,8 +36,8 @@ html, body {
   --txtblack20-color: #d9d9d9;
   --padraobordacinza-border-right: 1px solid #6f6f6e;
   --padraobordacinza-border-bottom: 1px solid #6f6f6e;
-  --padraobordaazul-border-right: 3px solid #92cd01;
-  --padraobordaazul-border-bottom: 3px solid #92cd01;
+  --padraobordaazul-border-right: 2px solid #92cd01;
+  --padraobordaazul-border-bottom: 2px solid #92cd01;
   --padraoborda-border-radius: 0 0 15px 0;
 }
 

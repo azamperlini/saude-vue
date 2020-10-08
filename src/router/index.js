@@ -17,9 +17,34 @@ const routes = [
     component: () => import('../views/site/InformativePage.vue'),
   },
   {
-    path: '/medical-records',
+    path: '/medical-records/edit',
     name: 'Medical-records',
-    component: () => import('../views/site/MedicalRecordsPage.vue'),
+    component: () => import('../views/site/medicalRecordsPages/MedicalRecordsFormPersonalData.vue'),
+  },
+  {
+    path: '/medical-records/edit/address',
+    name: 'Medical-records-address',
+    component: () => import('../views/site/medicalRecordsPages/MedicalRecordsFormAddress.vue'),
+  },
+  {
+    path: '/medical-records/edit/contact',
+    name: 'Medical-records-contact',
+    component: () => import('../views/site/medicalRecordsPages/MedicalRecordsFormContact.vue'),
+  },
+  {
+    path: '/medical-records/edit/blood',
+    name: 'Medical-records-blood',
+    component: () => import('../views/site/medicalRecordsPages/MedicalRecordsFormBlood.vue'),
+  },
+  {
+    path: '/medical-records/edit/allergy',
+    name: 'Medical-records-allergy',
+    component: () => import('../views/site/medicalRecordsPages/MedicalRecordsFormAllergy.vue'),
+  },
+  {
+    path: '/medical-records/edit/medicineContinuours',
+    name: 'Medical-records-medicinecontinuors',
+    component: () => import('../views/site/medicalRecordsPages/MedicalRecordsFormMedicineForContin.vue'),
   },
   {
     path: '/health-agent',

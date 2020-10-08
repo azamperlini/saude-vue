@@ -41,7 +41,7 @@ import FormAllergy from '@/components/accordionMedicalRecords/AccordionAllergy.v
 import FormMedContin from '@/components/accordionMedicalRecords/AccordionMedicineForContinu.vue';
 
 export default {
-  name: 'Medical-records',
+  name: 'Medical-records-modelo',
   components: {
     Header,
     Footer,
