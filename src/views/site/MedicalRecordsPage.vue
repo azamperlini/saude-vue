@@ -7,23 +7,21 @@
           <img  alt="Ícone Coração" src="../../assets/heart_blue.png">
           rotas
         </div>
-        <ul>
-          <router-link to="/agenda"><li>Agendamento</li></router-link>
-          <router-link to="/medical-records"><li>Editar</li></router-link>
-          <router-link to="/view-records"><li>Visualizar</li></router-link>
-        </ul>
-      </div>
-      <section class="content-forms">
-        <div class="content-numberMR">
-          <h2 class="numberMR">Prontuário nº: 2020</h2>
+        <div>
+          <a href="#">
+            <button class="btn-content" @click="redirectContent('agenda')">Agendamento</button>
+          </a>
+          <a href="#">
+            <button class="btn-content" @click="redirectContent('edit')">Formulários</button>
+          </a>
+          <a href="#">
+            <button class="btn-content" @click="redirectContent('view')">Prontuário</button>
+          </a>
         </div>
-        <FormPersonalData />
-        <FormAddress />
-        <FormContact />
-        <FormBlood />
-        <FormAllergy />
-        <FormMedContin />
-      </section>
+      </div>
+        <MedicalRecordsAgenda v-show="currentItemContent === 'agenda'" />
+        <MedicalRecordsEdit v-show="currentItemContent === 'edit'"/>
+        <MedicalRecordsView v-show="currentItemContent === 'view'"/>
     </main>
     <Footer />
   </div>
@@ -33,24 +31,28 @@
 
 import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
-import FormPersonalData from '@/components/accordionMedicalRecords/AccordionPersonalData.vue';
-import FormAddress from '@/components/accordionMedicalRecords/AccordionAddress.vue';
-import FormContact from '@/components/accordionMedicalRecords/AccordionContact.vue';
-import FormBlood from '@/components/accordionMedicalRecords/AccordionBlood.vue';
-import FormAllergy from '@/components/accordionMedicalRecords/AccordionAllergy.vue';
-import FormMedContin from '@/components/accordionMedicalRecords/AccordionMedicineForContinu.vue';
+import MedicalRecordsEdit from './medicalRecordsPages/editContent/MedicalRecordsEdit.vue';
+import MedicalRecordsView from './medicalRecordsPages/viewContent/MedicalRecordsView.vue';
+import MedicalRecordsAgenda from './medicalRecordsPages/agendaContent/MedicalRecordsAgenda.vue';
 
 export default {
-  name: 'Medical-records-modelo',
+  name: 'Medical-records',
+  data() {
+    return {
+      currentItemContent: 'edit',
+    };
+  },
   components: {
     Header,
     Footer,
-    FormPersonalData,
-    FormAddress,
-    FormContact,
-    FormBlood,
-    FormAllergy,
-    FormMedContin,
+    MedicalRecordsAgenda,
+    MedicalRecordsEdit,
+    MedicalRecordsView,
+  },
+  methods: {
+    redirectContent(item) {
+      this.currentItemContent = item;
+    },
   },
 };
 </script>
@@ -65,15 +67,14 @@ export default {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  margin: 10px 40px 10px 50px;
+  margin: 10px 60px;
 }
 
 .navMR p {
   text-align: center;
 }
 
-.navMR ul li {
-  display: inline-block;
+.btn-content {
   margin: 0 0 0 30px;
   padding: 3px;
   width: 140px;
@@ -85,13 +86,14 @@ export default {
   background-color: white;
 }
 
-.nav ul li:hover {
+.btn-content:hover {
   background-color: var(--black20-background-color);
   color: black;
   font-weight: bold;
 }
 
-.navMR .router-link-exact-active li {
+.btn-content:focus {
+  outline: none;
   font-weight: bold;
   color: white;
   background-color: var(--azul-background-color);

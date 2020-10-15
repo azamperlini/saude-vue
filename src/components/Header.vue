@@ -8,7 +8,7 @@
         </router-link>
         <ul>
           <router-link to="/informative"><li>Informativos</li></router-link>
-          <router-link to="/medical-records/edit"><li>Prontuários</li></router-link>
+          <router-link to="/user"><li>Usuário</li></router-link>
           <router-link to="/health-agent"><li>AG. Saúde</li></router-link>
           <router-link to="/register"><li id="register">Cadastrar</li></router-link>
           <router-link to="/login"><li id="login">Login</li></router-link>
