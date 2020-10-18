@@ -83,7 +83,7 @@ export default {
     border: none;
 }
 
-.v-select {
+/*.v-select {
   width: 100%;
   border-top: none;
   border-left: none;
@@ -91,7 +91,7 @@ export default {
   border-bottom: var(--padraobordacinza-border-bottom);
   border-radius: var(--padraoborda-border-radius);
   font-size: 1.1em;
-}
+}*/
 
 .v-select:focus {
   outline: none;

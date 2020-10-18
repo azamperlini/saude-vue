@@ -1,30 +1,34 @@
 <template>
   <section class="content-forms">
     <div class="inputBoxSearch">
-        <label>Localizar Agente de Saúde:</label>
-        <div class="search">
-            <img  alt="Ícone Localizador" src="@/assets/search_image.png">
-            <input
-                class="inputSearch"
-                type="text"
-                placeholder=" Matrícula \ CPF"
-            >
-        </div>
+      <div class="search">
+        <img  alt="Ícone Localizador" src="@/assets/search_image.png">
+          <input
+            class="inputSearch"
+            type="search"
+            placeholder=" Matrícula"
+          >
+      </div>
     </div>
     <article class="content-article">
       <div class="title-article">
         <a href="#">
-          <button class="btn-tab" @click.prevent="redirectTab('identification')">
+          <button class="btn-tab" :class="{fixed: currentItem === 'identification'}"
+            @click.prevent="redirectTab('identification')">
             IDENTIFICAÇÃO
           </button>
         </a>
         <a href="#">
-          <button class="btn-tab" @click.prevent="redirectTab('report')">
+          <button
+            class="btn-tab" :class="{fixed: currentItem === 'report'}"
+            @click.prevent="redirectTab('report')">
             RELATÓRIO DE HORAS
           </button>
         </a>
         <a href="#">
-          <button class="btn-tab" @click.prevent="redirectTab('occurrences')">
+          <button
+            class="btn-tab" :class="{fixed: currentItem === 'occurrences'}"
+            @click.prevent="redirectTab('occurrences')">
             OCORRÊNCIAS
           </button>
         </a>
@@ -64,7 +68,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 
 .content-forms {
   display: grid;
@@ -73,25 +77,6 @@ export default {
   width: 100%;
   background-color: white;
   padding: var(--padrao-padding);
-}
-
-.inputBoxSearch {
-    float: right;
-    width: 100%;
-}
-
-.search {
-    float: right;
-    padding: 5px;
-    width: 300px;
-}
-
-.search img {
-    margin: 1%;
-}
-
-.inputSearch {
-    width: 80%;
 }
 
 .content-article {
@@ -128,7 +113,7 @@ export default {
   font-weight: bold;
 }
 
-.btn-tab:focus {
+.btn-tab.fixed {
   font-weight: bold;
   color: white;
   background-color: var(--azul-background-color);
@@ -166,13 +151,23 @@ label {
   justify-content: space-between;
 }
 
-.inputBoxCol3 {
-  width: 29%;
+.inputBoxCol1 {
+  width: 100%;
   margin: 2%;
 }
 
 .inputBoxCol2 {
   width: 63%;
+  margin: 2%;
+}
+
+.inputBoxCol3 {
+  width: 29%;
+  margin: 2%;
+}
+
+.inputBoxCol4 {
+  width: 20%;
   margin: 2%;
 }
 

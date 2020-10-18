@@ -10,25 +10,25 @@
         <div>
           <a href="#">
             <button
-              class="btn-content"
+              class="btn-content" :class="{fixed: currentItemContent === 'profile'}"
               @click="redirectContent('profile')">Perfil
             </button>
           </a>
           <a href="#">
             <button
-              class="btn-content"
+              class="btn-content" :class="{fixed: currentItemContent === 'onDuty'}"
               @click="redirectContent('onDuty')">Plantão
             </button>
           </a>
           <a href="#">
             <button
-              class="btn-content"
+              class="btn-content" :class="{fixed: currentItemContent === 'reports'}"
               @click="redirectContent('reports')">Relatórios
             </button>
           </a>
           <a href="#">
             <button
-              class="btn-content"
+              class="btn-content" :class="{fixed: currentItemContent === 'research'}"
               @click="redirectContent('research')">Pesquisa
             </button>
           </a>
@@ -110,7 +110,7 @@ export default {
   font-weight: bold;
 }
 
-.btn-content:focus {
+.btn-content.fixed {
   outline: none;
   font-weight: bold;
   color: white;

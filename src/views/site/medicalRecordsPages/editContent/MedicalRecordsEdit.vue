@@ -6,32 +6,44 @@
     <article class="content-article">
       <div class="title-article">
         <a href="#">
-          <button class="btn-tab" @click.prevent="redirectTab('personalData')">
+          <button
+            class="btn-tab" :class="{fixed: currentItem === 'personalData'}"
+            @click.prevent="redirectTab('personalData')">
             DADOS PESSOAIS
           </button>
         </a>
         <a href="#">
-          <button class="btn-tab" @click.prevent="redirectTab('address')">
+          <button
+            class="btn-tab" :class="{fixed: currentItem === 'address'}"
+            @click.prevent="redirectTab('address')">
             ENDEREÇO
           </button>
         </a>
         <a href="#">
-          <button class="btn-tab" @click.prevent="redirectTab('contact')">
+          <button
+            class="btn-tab" :class="{fixed: currentItem === 'contact'}"
+            @click.prevent="redirectTab('contact')">
             CONTATOS
           </button>
         </a>
         <a href="#">
-          <button class="btn-tab" @click.prevent="redirectTab('blood')">
+          <button
+            class="btn-tab" :class="{fixed: currentItem === 'blood'}"
+            @click.prevent="redirectTab('blood')">
             INFORMAÇÕES SANGUINEAS
           </button>
         </a>
         <a href="#">
-          <button class="btn-tab" @click.prevent="redirectTab('allergy')">
+          <button
+            class="btn-tab" :class="{fixed: currentItem === 'allergy'}"
+            @click.prevent="redirectTab('allergy')">
             ALERGIAS
           </button>
         </a>
         <a href="#">
-          <button class="btn-tab" @click.prevent="redirectTab('medicine')">
+          <button
+            class="btn-tab" :class="{fixed: currentItem === 'medicine'}"
+            @click.prevent="redirectTab('medicine')">
             MEDICAMENTOS DE USO CONTÍNUO
           </button>
         </a>
@@ -138,7 +150,7 @@ export default {
   font-weight: bold;
 }
 
-.btn-tab:focus {
+.btn-tab.fixed {
   font-weight: bold;
   color: white;
   background-color: var(--azul-background-color);
@@ -176,13 +188,23 @@ label {
   justify-content: space-between;
 }
 
-.inputBoxCol3 {
-  width: 29%;
+.inputBoxCol1 {
+  width: 100%;
   margin: 2%;
 }
 
 .inputBoxCol2 {
   width: 63%;
+  margin: 2%;
+}
+
+.inputBoxCol3 {
+  width: 29%;
+  margin: 2%;
+}
+
+.inputBoxCol4 {
+  width: 21%;
   margin: 2%;
 }
 

@@ -9,13 +9,22 @@
         </div>
         <div>
           <a href="#">
-            <button class="btn-content" @click="redirectContent('agenda')">Agendamento</button>
+            <button
+              class="btn-content" :class="{fixed: currentItemContent === 'agenda'}"
+              @click="redirectContent('agenda')">Agendamento
+            </button>
           </a>
           <a href="#">
-            <button class="btn-content" @click="redirectContent('edit')">Formulários</button>
+            <button
+              class="btn-content" :class="{fixed: currentItemContent === 'edit'}"
+              @click="redirectContent('edit')">Formulários
+            </button>
           </a>
           <a href="#">
-            <button class="btn-content" @click="redirectContent('view')">Prontuário</button>
+            <button
+              class="btn-content" :class="{fixed: currentItemContent === 'view'}"
+              @click="redirectContent('view')">Prontuário
+            </button>
           </a>
         </div>
       </div>
@@ -92,7 +101,7 @@ export default {
   font-weight: bold;
 }
 
-.btn-content:focus {
+.btn-content.fixed {
   outline: none;
   font-weight: bold;
   color: white;

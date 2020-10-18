@@ -38,7 +38,6 @@
       <AccordionAllergy />
       <AccordionMedicineContinuours />
       <AccordionAddressContact />
-      <button class="btn buttonPDF">Gerar PDF</button>
     </div>
   </form>
 </template>
@@ -66,7 +65,7 @@ export default {
 .contentArticle {
   margin: 0 auto;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   width: 60%;
   border: 2px solid #92cd01;
   background-color: white;
