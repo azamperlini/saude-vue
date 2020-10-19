@@ -11,13 +11,14 @@
                 >
             </div>
             <div class="inputBoxCol3">
-                <label>Período:</label><br>
-                <input
-                    class="inputPadrao"
-                    type="text"
-                    required="" oninvalid="setCustomValidity('Campo Obrigatório')"
-                    oninput="setCustomValidity('')"
-                >
+                <label>Perfil:</label><br>
+                <select>
+                    <option>PÚBLICO</option>
+                    <option>AGENTE DE SAÚDE</option>
+                    <option>PESQUISADOR</option>
+                    <option>SOCORRISTA</option>
+                    <option>SUPERVISOR</option>
+                </select>
             </div>
         </div>
         <div class="inputsBox">
@@ -40,13 +41,13 @@
                 >
             </div>
             <div class="inputBoxCol3">
-                <label>Perfil:</label><br>
-                <select>
-                    <option>PÚBLICO</option>
-                    <option>SOCORRISTA</option>
-                    <option>SUPERVISOR</option>
-                    <option>PESQUISADOR</option>
-                </select>
+                <label>Período:</label><br>
+                <input
+                    class="inputPadrao"
+                    type="text"
+                    required="" oninvalid="setCustomValidity('Campo Obrigatório')"
+                    oninput="setCustomValidity('')"
+                >
             </div>
         </div>
         <div class="inputsBox">
@@ -143,7 +144,6 @@
                     oninput="setCustomValidity('')"
                 >
             </div>
-            <button class="btn buttonSalve">Foto Perfil</button>
         </div>
         <div class="boxBtn">
             <button class="btn buttonSalve">Salvar</button>

@@ -240,12 +240,12 @@ select:focus {
 }
 
 .btn {
-  width: 200px;
+  width: 150px;
   margin: 0 10px;
   border: none;
-  border-radius: 10px;
-  padding: 8px;
-  font-size: 1.1em;
+  border-radius: 15px;
+  padding: 6px;
+  font-size: 1em;
   color: black;
 }
 

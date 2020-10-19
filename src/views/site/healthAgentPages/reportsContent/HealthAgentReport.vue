@@ -6,226 +6,101 @@
           <input
             class="inputSearch"
             type="search"
-            placeholder=" Matrícula"
+            placeholder=" Matrícula / CPF"
           >
       </div>
     </div>
-    <article class="content-article">
-      <div class="title-article">
-        <a href="#">
-          <button class="btn-tab" :class="{fixed: currentItem === 'identification'}"
-            @click.prevent="redirectTab('identification')">
-            IDENTIFICAÇÃO
-          </button>
-        </a>
-        <a href="#">
-          <button
-            class="btn-tab" :class="{fixed: currentItem === 'report'}"
-            @click.prevent="redirectTab('report')">
-            RELATÓRIO DE HORAS
-          </button>
-        </a>
-        <a href="#">
-          <button
-            class="btn-tab" :class="{fixed: currentItem === 'occurrences'}"
-            @click.prevent="redirectTab('occurrences')">
-            OCORRÊNCIAS
-          </button>
-        </a>
-      </div>
-      <div class="form-body">
-        <FormIdentification v-show="currentItem === 'identification'" />
-        <FormHourReport v-show="currentItem === 'report'" />
-        <FormOccurrences v-show="currentItem === 'occurrences'" />
-      </div>
-    </article>
+    <div class="contentHealthAgentReport">
+      <h2>ALEXANDRE ZAMPERLINI</h2>
+      <table>
+        <tr>
+          <td class="tdLeft2">CPF:</td>
+          <td class="tdRigth2">168.683.628-70</td>
+          <td class="tdLeft2">Perfil:</td>
+          <td class="tdRigth2">SOCORRISTA</td>
+        </tr>
+        <tr>
+          <td class="tdLeft2">Matrícula:</td>
+          <td class="tdRigth2">20181044</td>
+          <td class="tdLeft2">Período:</td>
+          <td class="tdRigth2">6º PERÍODO</td>
+        </tr>
+        <tr>
+          <td class="tdLeft2">CEP:</td>
+          <td class="tdRigth2">89228-600</td>
+          <td class="tdLeft2">Logradouro:</td>
+          <td class="tdRigth2">RUA WALDEMIRO PAULO LOPES</td>
+        </tr>
+        <tr>
+          <td class="tdLeft2">Número:</td>
+          <td class="tdRigth2">725</td>
+          <td class="tdLeft2">Complemento:</td>
+          <td class="tdRigth2">CASA 2</td>
+        </tr>
+        <tr>
+          <td class="tdLeft2">Estado:</td>
+          <td class="tdRigth2">SANTA CATARINA</td>
+          <td class="tdLeft2">Município:</td>
+          <td class="tdRigth2">JOINVILLE</td>
+        </tr>
+        <tr>
+          <td class="tdLeft2">Bairro:</td>
+          <td class="tdRigth2">ESPINHEIROS</td>
+          <td class="tdLeft2">Tel. Residencial:</td>
+          <td class="tdRigth2">(47) XXXX-XXXX</td>
+        </tr>
+        <tr>
+          <td class="tdLeft2">Celular:</td>
+          <td class="tdRigth2">(11) 96540-7520</td>
+          <td class="tdLeft2">WhatsApp:</td>
+          <td class="tdRigth2">SIM</td>
+        </tr>
+        <tr>
+          <td class="tdLeft2">E-mail:</td>
+          <td class="tdRigth2" colspan="3">20181044@IELUSC.BR</td>
+        </tr>
+      </table>
+      <AccordionHourReport />
+      <AccordionOccurrencesReport />
+    </div>
   </section>
 </template>
 
 <script>
 
-import FormIdentification from './FormIdentification.vue';
-import FormHourReport from './FormHourReport.vue';
-import FormOccurrences from './FormOccurrences.vue';
+import AccordionHourReport from './AccordionHourReport.vue';
+import AccordionOccurrencesReport from './AccordionOccurrencesReport.vue';
 
 export default {
   name: 'HealthAgentReport',
-  data() {
-    return {
-      currentItem: 'report',
-    };
-  },
   components: {
-    FormIdentification,
-    FormHourReport,
-    FormOccurrences,
-  },
-  methods: {
-    redirectTab(item) {
-      this.currentItem = item;
-    },
+    AccordionHourReport,
+    AccordionOccurrencesReport,
   },
 };
 </script>
 
 <style scoped>
 
-.content-forms {
-  display: grid;
-  grid-template-rows: auto;
+.contentHealthAgentReport {
+  width: 80%;
   margin: 0 auto;
-  width: 100%;
-  background-color: white;
-  padding: var(--padrao-padding);
+  padding: 60px 0;
+  text-align: center;
 }
 
-.content-article {
-  width: 100%;
-}
-
-.title-article {
-  margin-top: 30px;
-  background-color: var(--black20-background-color);
-  border-radius: 0 20px 0 0;
-  text-align: left;
-}
-
-.btn-tab {
-  cursor: pointer;
-  padding: 15px 30px 10px 30px;
-  background-color: var(--black20-background-color);
-  border-top: none;
-  border-left: none;
-  border-right: var(--padraobordacinza-border-right);
-  border-bottom: none;
-  border-radius: 0 20px 0 0;
-  font-size: 0.9em;
-  font-weight: normal;
-}
-
-.btn-tab:focus {
-  outline: none;
-}
-
-.btn-tab:hover {
-  background-color: var(--black40-background-color);
-  color: black;
-  font-weight: bold;
-}
-
-.btn-tab.fixed {
-  font-weight: bold;
-  color: white;
-  background-color: var(--azul-background-color);
-  border-right: var(--padraobordaazul-border-right);
-  border-bottom: var(--padraobordaazul-border-bottom);
-}
-
-.form-body   {
-  margin: 0;
-  padding: 60px;
-  border: 2px solid#d9d9d9;
-}
-
-.form-content {
-  height: auto;
-}
-
-label {
-  font-size: 1.1em;
-  color: var(--txtAzul-color);
-}
-
-.label2 {
-  margin-right: 5%;
-}
-
-.labelCheck {
-  margin-right: 10%;
-  color: black;
-}
-
-.inputsBox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.inputBoxCol1 {
-  width: 100%;
-  margin: 2%;
-}
-
-.inputBoxCol2 {
-  width: 63%;
-  margin: 2%;
-}
-
-.inputBoxCol3 {
-  width: 29%;
-  margin: 2%;
-}
-
-.inputBoxCol4 {
+.tdLeft2 {
   width: 20%;
-  margin: 2%;
+  padding: 6px 20px;
+  font-size: 1em;
+  border-left: 2px solid white;
 }
 
-.inputPadrao, select {
-  width: 100%;
-  border-top: none;
-  border-left: none;
-  border-right: var(--padraobordacinza-border-right);
-  border-bottom: var(--padraobordacinza-border-bottom);
-  border-radius: var(--padraoborda-border-radius);
-  font-size: 1.1em;
-}
-
-.inputCheck {
-  margin: 10% 5% 5% 0;
-}
-
-.inputCheck2 {
-  margin: 2% 3% 2% 0;
-}
-
-select {
-  width: 101%;
-}
-
-select:focus {
-  outline: none;
-}
-
-.boxBtn{
-  margin-top: 20px;
-  text-align: right;
-}
-
-.btn {
-  width: 200px;
-  margin: 0 10px;
-  border: none;
-  border-radius: 10px;
-  padding: 8px;
-  font-size: 1.1em;
-  color: black;
-}
-
-.buttonEdit {
-  background-color: var(--black20-background-color);
-}
-
-.buttonEdit:hover {
-  background-color: var(--black40-background-color);
-}
-
-.buttonSalve {
-  background-color: var(--verde-backgruond-color);
-}
-
-.buttonSalve:hover {
-  background-color: #78a115;
+.tdRigth2 {
+  width: 30%;
+  padding: 6px 20px;
+  color: #6f6f6e;
+  font-size: 0.9em;
 }
 
 </style>

@@ -10,12 +10,6 @@
         <div>
           <a href="#">
             <button
-              class="btn-content" :class="{fixed: currentItemContent === 'agenda'}"
-              @click="redirectContent('agenda')">Agendamento
-            </button>
-          </a>
-          <a href="#">
-            <button
               class="btn-content" :class="{fixed: currentItemContent === 'edit'}"
               @click="redirectContent('edit')">Formulários
             </button>
@@ -28,7 +22,6 @@
           </a>
         </div>
       </div>
-        <MedicalRecordsAgenda v-show="currentItemContent === 'agenda'" />
         <MedicalRecordsEdit v-show="currentItemContent === 'edit'"/>
         <MedicalRecordsView v-show="currentItemContent === 'view'"/>
     </main>
@@ -42,7 +35,6 @@ import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 import MedicalRecordsEdit from './medicalRecordsPages/editContent/MedicalRecordsEdit.vue';
 import MedicalRecordsView from './medicalRecordsPages/viewContent/MedicalRecordsView.vue';
-import MedicalRecordsAgenda from './medicalRecordsPages/agendaContent/MedicalRecordsAgenda.vue';
 
 export default {
   name: 'Medical-records',
@@ -54,7 +46,6 @@ export default {
   components: {
     Header,
     Footer,
-    MedicalRecordsAgenda,
     MedicalRecordsEdit,
     MedicalRecordsView,
   },

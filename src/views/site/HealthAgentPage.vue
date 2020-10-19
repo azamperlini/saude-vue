@@ -26,18 +26,11 @@
               @click="redirectContent('reports')">Relatórios
             </button>
           </a>
-          <a href="#">
-            <button
-              class="btn-content" :class="{fixed: currentItemContent === 'research'}"
-              @click="redirectContent('research')">Pesquisa
-            </button>
-          </a>
         </div>
       </div>
         <HealthAgentProfile v-show="currentItemContent === 'profile'" />
         <HealthAgentOnDuty v-show="currentItemContent === 'onDuty'" />
         <HealthAgentReport v-show="currentItemContent === 'reports'"/>
-        <HealthAgentResearch v-show="currentItemContent === 'research'"/>
     </main>
     <Footer />
   </div>
@@ -50,7 +43,6 @@ import Footer from '@/components/Footer.vue';
 import HealthAgentProfile from './healthAgentPages/profileContent/HealthAgentProfile.vue';
 import HealthAgentOnDuty from './healthAgentPages/onDutyContent/HealthAgentOnDuty.vue';
 import HealthAgentReport from './healthAgentPages/reportsContent/HealthAgentReport.vue';
-import HealthAgentResearch from './healthAgentPages/researchContent/HealthAgentResearch.vue';
 
 export default {
   name: 'Health-agent',
@@ -65,7 +57,6 @@ export default {
     HealthAgentProfile,
     HealthAgentOnDuty,
     HealthAgentReport,
-    HealthAgentResearch,
   },
   methods: {
     redirectContent(item) {

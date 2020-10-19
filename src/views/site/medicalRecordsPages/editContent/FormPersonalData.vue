@@ -122,6 +122,7 @@
         <label>Desconhecida</label>
       </div>
     </div>
+    <button class="btn buttonSalve">Foto Perfil</button>
     <div class="boxBtn">
       <button class="btn buttonSalve">Salvar</button>
       <button class="btn buttonEdit">Editar</button>
